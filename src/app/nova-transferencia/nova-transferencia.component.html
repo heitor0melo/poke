@@ -1,0 +1,22 @@
+<section *ngIf="!!pokemon">
+  <h2 class="formulario__titulo">{{ pokemon.name }}</h2>
+  <h5>Altura: {{ pokemon.height }};</h5>
+  <h5>Peso: {{ pokemon.weight }};</h5>
+  <h5>Experiência básica: {{ pokemon.base_experience }};</h5>
+
+  <p><b>{{"Movimentos: "}}</b>{{movesPokemon}};</p>
+  <p><b>{{"Abilidades: "}}</b>{{abilidades}};</p>
+
+  <table class="tabela">
+    <thead class="tabela__cabecalho">
+      <th class="tabela__cabecalho__conteudo">Imagens</th>
+    </thead>
+    <tbody>
+      <tr class="tabela__linha" *ngFor="let sprite of imagens">
+        <td class="tabela__conteudo">
+          <img ng-src="{{sprite}}" src="{{sprite}}">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
